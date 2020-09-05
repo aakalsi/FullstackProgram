@@ -29,7 +29,7 @@
 		  </tr>
 		  <tr>
 		  	<td>Div Section</td>
-		  	<td>div</td>
+		  	<td>&ltdiv&gt</td>
 		  	<td>
 		  		<ul>
 		  			<li>The div tag defines a division or a section in an HTML document.</li>
@@ -46,7 +46,7 @@
 		  </tr>
 		  <tr>
 		  	<td>Headings</td>
-		  	<td>h1,h2,h3,h4,h5,h6</td>
+		  	<td>&lth1&gt,&lth2&gt,&lth3&gt,&lth4&gt,&lth5&gt,&lth6&gt</td>
 		  	<td>
 		  		<ul>
 		  			<li>The h1 to h6 tags are used to define HTML headings.
@@ -57,13 +57,26 @@
 		  </tr>
 		  <tr>
 		  	<td>Paragraph</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&ltp&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The p tag defines a paragraph.Browsers automatically add a single blank line before and after each p element.</li>
+		  		</ul>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Image</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&ltimg&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The img tag is used to embed an image in an HTML page. Images are not technically inserted into a web page; images are linked to web pages. The img tag creates a holding space for the referenced image.</li>
+					<li>The img tag has two required attributes:<br/>
+						src - Specifies the path to the image<br/>
+						alt - Specifies an alternate text for the image, if the image for some reason cannot be displayed</li>
+					<li>Note: Also, always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.</li>
+					<li>Tip: To link an image to another document, simply nest the img tag inside an &lta&gt tag (see example below).</li>
+		  		</ul>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Outbound Link</td>
@@ -77,18 +90,33 @@
 		  </tr>
 		  <tr>
 		  	<td>Bold Text</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&ltb&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The b tag specifies bold text without any extra importance.</li>
+		  			<li>Note: According to the HTML5 specification, the b tag should be used as a LAST resort when no other tag is more appropriate. The specification states that headings should be denoted with the h1 to h6 tags, emphasized text should be denoted with the em tag, important text should be denoted with the strong tag, and marked/highlighted text should be denoted with the mark tag.</li>
+		  		</ul>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Underline Text</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&ltu&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The &ltu&gt tag represents some text that is unarticulated and styled differently from normal text, such as misspelled words or proper names in Chinese text. The content inside is typically displayed with an underline. </li>
+		  			<li>Tip: Avoid using the &ltu&gt element where it could be confused for a hyperlink!</li>
+		  		</ul>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Italic Text</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&lti&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The HTML i element defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic. </li>
+		  			<li>Tip: The i tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.</li>
+		  		</ul>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Mailto Link</td>
@@ -97,28 +125,54 @@
 		  </tr>
 		  <tr>
 		  	<td>Iframe</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&ltiframe&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The &ltiframe&gt tag specifies an inline frame.</li>
+		  			<li>An inline frame is used to embed another document within the current HTML document. </li>
+					<li>Tip: It is a good practice to always include a title attribute for the &ltiframe&gt. This is used by screen readers to read out what the content of the &ltiframe&gt is.</li>		
+		  		</ul>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Abbreviation</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&ltabbr&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The &ltabbr&gt tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".</li>
+					<li>Tip: Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element.</li>
+		  		</ul>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Comment</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&lt!-- --&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The comment tag is used to insert comments in the source code. Comments are not displayed in the browsers.You can use comments to explain your code, which can help you when you edit the source code at a later date. This is especially useful if you have a lot of code.</li>
+		  		</ul>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Horizontal Line</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&lthr&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The &lthr&gt tag defines a thematic break in an HTML page (e.g. a shift of topic).</li>
+					<li>The &lthr&gt element is most often displayed as a horizontal rule that is used to separate content (or define a change) in an HTML page.</li>
+		  		</ul>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Line Break</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&ltbr&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The &ltbr&gt tag inserts a single line break.</li>
+					<li>The &ltbr&gt tag is useful for writing addresses or poems.</li> 
+					<li>The &ltbr&gt tag is an empty tag which means that it has no end tag.</li>
+		  		</ul>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Quotation</td>
@@ -127,13 +181,27 @@
 		  </tr>
 		  <tr>
 		  	<td>Video</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&ltvideo&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The &ltvideo&gt tag is used to embed video content in a document, such as a movie clip or other video streams.</li>
+					<li>The &ltvideo&gt tag contains one or more &ltsource&gt tags with different video sources. The browser will choose the first source it supports.</li>
+					<li>The text between the &ltvideo&gt and &ltvideo&gt tags will only be displayed in browsers that do not support the &ltvideo&gt element.</li>
+					<li>There are three supported video formats in HTML: MP4, WebM, and OGG.</li>
+		  		</ul>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Audio</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&ltaudio&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The &ltaudio&gt tag is used to embed sound content in a document, such as music or other audio streams.</li>
+					<li>The &ltaudio&gt tag contains one or more <source> tags with different audio sources. The browser will choose the first source it supports.</li>
+					<li>The text between the &ltaudio&gt and &ltaudio&gt tags will only be displayed in browsers that do not support the &ltaudio&gt element.</li>
+					<li>There are three supported audio formats in HTML: MP3, WAV, and OGG.</li>
+		  		</ul>
+		  	</td>
 		  </tr>		  
 		</table>
 
