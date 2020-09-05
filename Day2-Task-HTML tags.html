@@ -21,7 +21,7 @@
 	</head>
 	<body>
 		<h2>HTML Cheatsheet Tags with explanations</h2>
-		<table style="width:60%">
+		<table style="width:70%">
 		  <tr>
 		    <th>Group</th>
 		    <th>Tag</th>
@@ -80,13 +80,28 @@
 		  </tr>
 		  <tr>
 		  	<td>Outbound Link</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td><p class="code"><code>&lt;a href="http://www.yourhtmlsource.com/<br>
+				text/internallinks.html<strong>#section-names</strong>"&gt;</code></p></td>
+		  	<td>
+		  		<p class="">You can target specific sections of <em>other</em> pages by adding the <code>#name</code> bit on to the end of the <code>href</code>. The part after the hash mark is known as a “fragment identifier.” For instance, to link to the first section of this tutorial from somewhere else, you would write</p>
+		  		<p class="code"><code>&lt;a href="http://www.yourhtmlsource.com/<br>
+				text/internallinks.html<strong>#section-names</strong>"&gt;</code></p>
+				<p>Of course, the sections you can link to are restricted by which sections actually exist on the page you’re linking to. View the HTML source code (go to View &gt; Source) of a page you want to link to and see if they have any sections named.</p>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Inner Anchor(jump on page)</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td><code>&lt;a <strong>name</strong>="top"&gt;&lt;/a&gt;</code><br>
+		  		<code>&lt;a href="<strong>#</strong>top"&gt;link to top&lt;/a&gt;</code>
+		  	</td>
+		  	<td>
+		  		<p>Basically, page jumps are just <strong>links</strong> (they use the same <code>&lt;a&gt;</code> element as all links), but links that point to a certain part of a document. This is done by <strong>assigning names to parts of your page</strong>, and then making the link by referring to that section.</p>
+		  		<p>Page jumps are done by using the <code>name</code> attribute of the <code>a</code> element. So, say you wanted a link to the top of your page, you would add an anchor like this near the top of your document (inside the <code>&lt;body&gt;</code> element, of course):</p>
+		  		<p class="code"><code>&lt;a <strong>name</strong>="top"&gt;&lt;/a&gt;</code></p>
+		  		<p>There doesn’t need to be anything between the opening and closing tags. Then, in the place you want to place the link, put</p>
+		  		<p class="code"><code>&lt;a href="<strong>#</strong>top"&gt;link to top&lt;/a&gt;</code></p>
+		  		<p>Notice the <strong>hash mark (#)</strong>. That tells the browser that it’s a section of a page it’s looking for, and not a separate page or folder. So just make a link to the section you named earlier (you can name the link to the top anything you want, but keeping it memorable and simple always works out best) by putting a # in front of whatever <code>name</code> you gave it. Always remember, the <strong># goes in the <code>href</code></strong> attribute’s value, <em>not</em> in the <code>name</code>.</p>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Bold Text</td>
@@ -120,8 +135,18 @@
 		  </tr>
 		  <tr>
 		  	<td>Mailto Link</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td><p class="code">&lt;a href="mailto:<i>name@email.com</i>"&gt;<i>Link text</i>&lt;/a&gt;</p></td>
+		  	<td>
+		  		<p>Mailto link is a type of HTML link that activates the default mail client on the computer for sending an e-mail.</p>
+		  		<p>The web browser requires a default e-mail client software installed on his computer in order to activate the e-mail client.</p>
+		  		<p>If you have <i>Microsoft Outlook</i>, for example as your default mail client, pressing a mailto link will open a <i>new mail</i> window.</p>
+		  		<p>The mailto link is written like regular link with extra parameters inside the href attribute:</p>
+		  		<p class="code">&lt;a href="mailto:<i>name@email.com</i>"&gt;<i>Link text</i>&lt;/a&gt;</p>
+		  		<p>Mail to email address</p>
+		  		<p class="code">&lt;a href="mailto:name@rapidtables.com"&gt;Send mail&lt;/a&gt;</p>
+		  		<p style="padding:5px; font-size:14px">The code will generate this link:</p>
+		  		<p style="padding:5px; font-size:14px"><a href="mailto:name@rapidtables.com">Send mail</a></p>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Iframe</td>
@@ -176,8 +201,13 @@
 		  </tr>
 		  <tr>
 		  	<td>Quotation</td>
-		  	<td></td>
-		  	<td></td>
+		  	<td>&ltq&gt</td>
+		  	<td>
+		  		<ul>
+		  			<li>The HTML &ltq&gt tag defines a short quotation.</li>
+					<li>Browsers normally insert quotation marks around the quotation.</li>
+		  		</ul>
+		  	</td>
 		  </tr>
 		  <tr>
 		  	<td>Video</td>
