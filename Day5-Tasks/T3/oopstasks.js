@@ -11,7 +11,7 @@ class Calculator {
 
 let c=new Calculator();
 console.log(c.add(1,2));
-
+//2-Writing movie class
 class Movie {
   constructor(title,studio,rating) {
     this.title=title;
