@@ -1,0 +1,154 @@
+/* Core Styles */
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.1;
+    text-align: center;
+    width: 900px;
+    height: 1000px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    opacity: .2;
+}
+
+p{
+    margin: 0;
+    padding: 5px 0;
+}
+
+#showcase ul,
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    display: inline;
+    padding: 5px;
+}
+
+a:link{
+    text-decoration: none;
+    color:#333;
+}
+
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+  .header-content{
+      text-align: justify;
+      padding: 10px;
+      border-top: rgb(120, 116, 116) solid 2px ;
+      border-bottom: rgb(120, 116, 116) solid 2px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
+  .heading{
+      font-weight: bolder;
+      font-size: 30px;
+      text-transform: uppercase;
+      
+  }
+
+  .decorated-dates{
+      font-style: italic;
+      background-color: rgb(137, 37, 37);
+      color: #ffffff;
+      font-size: 20px;
+      padding: 5px 10px 5px 10px;
+      display: inline-block;
+      clip-path: polygon(0 0, 90% 0%, 100% 100%, 0% 100%);
+      margin-top: 15px;
+  }
+
+  .section-a-content, 
+  .section-b-content{
+      text-align: justify;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  @media(min-width:700px){
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .content-wrap{
+        grid-column: 2/4;
+    }
+
+    .top-header,
+    .top-header-list{
+        margin-top: 10px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        grid-column:span 2;
+        align-self: center;
+        font-style: italic;
+    }
+
+    .header-content, 
+    .heading{
+        grid-column: span 4;
+    }
+
+    .top-header{
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .top-header-list{
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .header-content{
+        text-align: center;
+        padding: 10px;
+        border-top: rgb(120, 116, 116) solid 2px ;
+        border-bottom: rgb(120, 116, 116) solid 2px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+  
+    .heading{
+        font-weight: bolder;
+        font-size: 100px;
+        text-transform: uppercase;
+        text-align: center;
+        font-stretch: expanded;
+        
+    }
+    .section-a-content{
+        grid-column: 1;
+        margin-left: 20px;
+    }
+
+    .section-a-img{
+        grid-column: 2;
+    }
+
+  }
