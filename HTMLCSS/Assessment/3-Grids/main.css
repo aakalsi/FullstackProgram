@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin:30px;
+}
+
+.product{
+    border-radius: 5px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.product .box{
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    width: 300px;
+    height: 300px;
+}
+
+.cards{
+    display: grid;
+}
+
+.product .box img{
+    display: block;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    width: 100%;
+}
+
+.details{
+    margin: 0;
+    width: 100%;
+    bottom: 0;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-left:  1px solid rgb(233, 224, 224);
+    border-right:  1px solid rgb(233, 224, 224);
+    border-bottom:  1px solid rgb(233, 224, 224);
+    margin-bottom: 20px;
+    width: 300px;
+    height: auto;
+}
+
+.details h2{
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 20px;
+    width: 100%;
+}
+
+.details p{
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.details .price{
+    display: inline-block;
+}
+
+.button{
+    background-color: #4CAF50;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
