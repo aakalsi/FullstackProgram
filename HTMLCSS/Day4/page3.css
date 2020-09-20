@@ -131,9 +131,10 @@ hr,
     
     .imgbox{
         max-width: 100%;
-        max-height: 100vh;
+        max-height: 100vh; 
         margin: auto;
         margin-left: 0%;
+        width: 100%;
         margin-bottom: 0px;
         object-fit: cover;
         padding-bottom: 15px;
@@ -170,6 +171,14 @@ hr,
         margin-top: -2%;
         height: 300px;
         width: 100%;
+        max-width: 100%;
+        max-height: 100vh; 
+        margin: auto;
+        margin-left: 0%;
+        width: 100%;
+        margin-bottom: 0px;
+        object-fit: cover;
+        padding-bottom: 15px;
     }
 
     .med-para{
