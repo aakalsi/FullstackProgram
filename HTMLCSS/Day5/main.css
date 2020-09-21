@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+  }
+  
+  .imageBox{
+    background-color:rgb(86, 86, 86);
+    width: 100%;
+    height:200px;
+    grid-area: overlap;
+    align-self: center;
+    justify-self: center ;
+  }
+  
+  .imageBox img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    width: 150px;
+    align-content: center;
+  }
+  
+  .whiteBar{
+    background-color: rgb(238, 238, 238);
+    color: rgb(238, 238, 238);
+    height: 25px;
+    grid-area: overlap;
+    align-self: center;
+    justify-self: center ;
+    width: 100%;
+    margin-top: 125px ;
+  }
+  
+  .name{
+    background-color: rgb(241, 191, 76);
+    /* grid-area: overlap; */
+    display: table-cell;
+    vertical-align: middle;
+    height: 50px;
+    color: black;
+    align-self: center;
+    justify-self: center ;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 8px;
+    font-size: 40px;
+    position: absolute;
+    top: 80%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 3px;
+  }
+  
+  .mainHeader{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1fr;
+    grid-template-areas: "overlap" ;
+    position: relative;
+  }
+  
+  .personalDetails{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding-top: 5px;
+    padding-bottom: 1px;
+    border-bottom: rgb(208, 208, 208) 1px solid;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .container{
+    column-count: 2;
+    padding: 40px;
+    column-gap: 40px;
+    column-rule: rgb(208, 208, 208) 1px solid; ;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  }
+  
+  .skills {
+    text-align: center;
+  }
+  
