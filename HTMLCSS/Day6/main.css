@@ -1,3 +1,38 @@
+body{
+    background: rgb(51, 145, 161);
+    margin:0px;
+    padding:0px;
+}
+
+
 .head{
     font-size: 40px;
+}
+
+.container{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+
+
+button{
+    height: 80px;
+    width: 80px;
+}
+
+input{
+    width: 320px;
+    height: 60px;
+    border: cornflowerblue;
+}
+
+#zero,#one,#two,#three,#four,#five,
+#six,#seven,#eight,#nine,#multiplication,
+#absolute{
+    float: left;
+    /* display: ;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr); */
 }

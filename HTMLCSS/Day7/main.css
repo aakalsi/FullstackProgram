@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    background: crimson;
+    display: grid;
+    grid-gap: 20px;
+    padding: 50px;
+    /* height: 100vh; */
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.container1{
+    border-radius: 20px;
+    position: relative;
+    width: 500px;
+    padding: 30px;
+    display: grid;
+    background: cyan;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: 1fr 40px;
+    justify-content: center;
+    align-content: center;
+    /* min-height: 100vh; */
+}
+
+button{
+    grid-column: span 4;
+    cursor: pointer;
+    background: rgb(55, 128, 167);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    border: 1px solid white;
+    outline: none;
+    /* background-color: rgb(255,255,255,.75); */
+}
+
+#message{
+    grid-column: span 4;
+    justify-self: center;
+    font-size: 2rem;
+}
+
+.container2{
+    border-radius: 20px;
+    position: relative;
+    width: 1000px;
+    padding: 30px;
+    grid-gap: 20px;
+    /* display: grid; */
+    background: bisque;
+    grid-template-columns: repeat(4,200px);
+    grid-template-rows: 1fr 40px;
+    justify-content: center;
+    /* justify-items: center;
+    justify-self: self-end; */
+    align-content: center;
+    /* min-height: 100vh; */
+    margin-bottom: 10px;
+}
+
+.calendar{
+    grid-column: span 2;
+    justify-self: self-end;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.calendar > label{
+    font-size: 20px;
+}
+
+#btn2{
+    grid-column: span 2;
+}
