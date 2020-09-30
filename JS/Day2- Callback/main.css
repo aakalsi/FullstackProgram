@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    height: 800px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.container{
+    position: relative;
+    padding: 10px 10px ;
+    border-radius: 1.2rem;
+    background: #cce1f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    width: 500px;
+    height: 300px;
+}
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+    font-size: 40px;
+}
+@keyframes blinkingText{
+	0%{		color: rgb(199, 13, 13);	}
+	49%{	color: transparent;	}
+	50%{	color: transparent;	}
+	99%{	color:transparent;	}
+	100%{	color: #000;	}
+}

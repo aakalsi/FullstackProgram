@@ -1,119 +1,181 @@
+
+let wrapper=document.createElement('div');
+wrapper.className="wrapper";
+document.body.append(wrapper);
+
 let container=document.createElement('div');
 container.className="container";
-document.body.append(container);
+wrapper.append(container);
 
-let input=document.createElement('div');
-let inputCap=document.createElement('input');
-inputCap.id="inpCap";
-inputCap.placeholder='enter values';
-input.appendChild(inputCap);
+let display=document.createElement('div');
+display.className='display';
+container.append(display);
 
-let zero=document.createElement('div');
-zero.id="zero";
+//to store the previous input value
+let inp2=document.createElement('div');
+inp2.className='inp2';
+display.appendChild(inp2);
+let inpPreviousValue=document.createElement('input');
+inpPreviousValue.id="inpPreviousValue";
+inpPreviousValue.placeholder='display';
+inp2.appendChild(inpPreviousValue);
+
+//to store the current input value
+let inp=document.createElement('div');
+inp.className='inp';
+display.appendChild(inp);
+let inputCurrentValue=document.createElement('input');
+inputCurrentValue.id="inpCurrentValue";
+inputCurrentValue.placeholder='enter values';
+inp.appendChild(inputCurrentValue);
+
+
 let zeroBtn=document.createElement('button');
 zeroBtn.innerText='0';
-zero.appendChild(zeroBtn);
+zeroBtn.className='number';
+container.appendChild(zeroBtn);
 
-let one=document.createElement('div');
-one.id="one";
+
 let oneBtn=document.createElement('button');
 oneBtn.innerText='1';
-one.appendChild(oneBtn);
+oneBtn.className='number';
+container.appendChild(oneBtn);
 
 
-let two=document.createElement('div');
-two.id="two";
 let twoBtn=document.createElement('button');
 twoBtn.innerText='2';
-two.appendChild(twoBtn);
+twoBtn.className='number';
+container.appendChild(twoBtn);
 
-let plus=document.createElement('div');
-plus.id="plus";
 let plusBtn=document.createElement('button');
+plusBtn.className='operation';
 plusBtn.innerText='+';
-plus.appendChild(plusBtn);
+container.appendChild(plusBtn);
 
-let three=document.createElement('div');
-three.id="three";
+
 let threeBtn=document.createElement('button');
+threeBtn.className='number';
 threeBtn.innerText='3';
-three.appendChild(threeBtn);
+container.appendChild(threeBtn);
 
-let four=document.createElement('div');
-four.id="four";
+
 let fourBtn=document.createElement('button');
+fourBtn.className='number';
 fourBtn.innerText='4';
-four.appendChild(fourBtn);
+container.appendChild(fourBtn);
 
-let five=document.createElement('div');
-five.id="five";
+
 let fiveBtn=document.createElement('button');
+fiveBtn.className='number';
 fiveBtn.innerText='5';
-five.appendChild(fiveBtn);
+container.appendChild(fiveBtn);
 
-let six=document.createElement('div');
-six.id="six";
+
 let sixBtn=document.createElement('button');
+sixBtn.className='number';
 sixBtn.innerText='6';
-six.appendChild(sixBtn);
+container.appendChild(sixBtn);
 
-let seven=document.createElement('div');
-seven.id="seven";
+
 let sevenBtn=document.createElement('button');
+sevenBtn.className='number';
 sevenBtn.innerText='7';
-seven.appendChild(sevenBtn);
+container.appendChild(sevenBtn);
 
-let eight=document.createElement('div');
-eight.id="eight";
+
 let eightBtn=document.createElement('button');
+eightBtn.className='number';
 eightBtn.innerText='8';
-eight.appendChild(eightBtn);
+container.appendChild(eightBtn);
 
-let nine=document.createElement('div');
-nine.id="nine";
 let nineBtn=document.createElement('button');
+nineBtn.className='number';
 nineBtn.innerText='9';
-nine.appendChild(nineBtn);
+container.appendChild(nineBtn);
 
 
-let minus=document.createElement('div');
-minus.id="minus";
+
 let minusBtn=document.createElement('button');
+minusBtn.className='operation';
 minusBtn.innerText='-';
-minus.appendChild(minusBtn);
+container.appendChild(minusBtn);
 
-let division=document.createElement('div');
-division.id="division";
 let divisionBtn=document.createElement('button');
+divisionBtn.className='operation';
 divisionBtn.innerText='/';
-division.appendChild(divisionBtn);
+container.appendChild(divisionBtn);
 
-let multiplication=document.createElement('div');
-multiplication.id="multiplication";
+
 let multiplicationBtn=document.createElement('button');
+multiplicationBtn.className='operation';
 multiplicationBtn.innerText='X';
-multiplication.appendChild(multiplicationBtn);
+container.appendChild(multiplicationBtn);
 
-let absolute=document.createElement('div');
-absolute.id="absolute";
+
 let absoluteBtn=document.createElement('button');
+absoluteBtn.className='operation';
 absoluteBtn.innerText='%';
-absolute.appendChild(absoluteBtn);
+container.appendChild(absoluteBtn);
 
-let equals=document.createElement('div');
-equals.id="equals";
+
 let equalsBtn=document.createElement('button');
+equalsBtn.className='operation';
+equalsBtn.id='equals';
 equalsBtn.innerText='=';
-equals.appendChild(equalsBtn);
+container.appendChild(equalsBtn);
 
-container.append(input,zero,one,two,plus,three,four,five,minus,six,seven,eight,division,nine,multiplication,absolute,equals);
+// container.append(zero,one,two,plus,three,four,five,minus,six,seven,eight,division,nine,multiplication,absolute,equals);
 
+let c=0;//to keep track of equals button press
 
-function addValueToInput(e){
-   let x= document.getElementById('inpCap').textContent='Hello';
-   console.log(x);
+const numberButtons = document.querySelectorAll(".number")
+for (const button of numberButtons) {
+   button.addEventListener('click', function(event) {
+      let sendInp = document.getElementById('inpCurrentValue');
+      if (+c===0){
+         sendInp.value+=event.target.textContent;
+      } else {
+         document.getElementById('inpCurrentValue').value='';
+         document.getElementById('inpPreviousValue').value='';
+         c=0;
+         sendInp.value+=event.target.textContent;
+      }
+  })
 }
 
-document.querySelector('#one').addEventListener('click',addValueToInput);
+const operationButtons = document.querySelectorAll(".operation")
+for (const button of operationButtons) {
+   button.addEventListener('click', function(event) {
+      let preVal1,prevVal2,sum;
+      let getInp = document.getElementById('inpCurrentValue');
+      if (event.target.textContent!='=' && document.getElementById('inpPreviousValue').value===''){
+        preVal1= document.getElementById('inpPreviousValue');
+        preVal1.value=getInp.value+' '+event.target.textContent;
+        getInp.value='';
+      } else if (event.target.textContent!='=' && document.getElementById('inpPreviousValue').value!=''){
+         let preValInt=document.getElementById('inpPreviousValue').value.split(' ');
+         console.log(preValInt);
+         if (event.target.textContent==='+'){
+            if (+c===0){
+               document.getElementById('inpPreviousValue').value=parseFloat(preValInt[0]) + parseFloat(document.getElementById('inpCurrentValue').value)+' '+event.target.textContent;
+            } else {
+               document.getElementById('inpPreviousValue').value=parseFloat(document.getElementById('inpCurrentValue').value)+' '+event.target.textContent;
+            }
+         } else if (event.target.textContent==='-'){
+            document.getElementById('inpPreviousValue').value=parseFloat(preValInt[0]) - parseFloat(document.getElementById('inpCurrentValue').value)+' '+event.target.textContent;        
+         }
+         getInp.value='';
+       } 
+      if(event.target.textContent==='='&& +c===0) {
+        let preValInt=document.getElementById('inpPreviousValue').value.split(' ');
+        prevVal2 = document.getElementById('inpPreviousValue').value+=' '+getInp.value;
+        if (preValInt[1]==='+'){
+            document.getElementById('inpCurrentValue').value=parseFloat(preValInt[0])+ parseFloat(document.getElementById('inpCurrentValue').value);
+        } else if (preValInt[1]==='-'){
+         document.getElementById('inpCurrentValue').value=parseFloat(preValInt[0]) - parseFloat(document.getElementById('inpCurrentValue').value);
+        }
+        c=1;
+      }
 
-
+   })
+}

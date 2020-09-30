@@ -68,7 +68,7 @@ let birthDate =document.getElementById('dateInput').value;
 
 function ageCalculate(){
         let birthDate =document.getElementById('dateInput').value;
-
+        
         let d = new Date(birthDate);
 
         let mdate = birthDate.toString();
