@@ -45,8 +45,7 @@ function initialize(restcountries) {
         let button = document.querySelectorAll('.btn');
         button.forEach(item => {
             item.addEventListener('click',function(e){
-            let t=(e.currentTarget.previousElementSibling.previousElementSibling.innerHTML).split(" ");
-            console.log(t);    
+            let t=(e.currentTarget.previousElementSibling.previousElementSibling.innerHTML).split(" ");   
             let lat=parseFloat(t[1]);
             let long=parseFloat(t[3]);
             // console.log(fetchW(lat,long));
@@ -67,7 +66,7 @@ function initialize(restcountries) {
 
 
 function fetchW(lat,long,curr){
-    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=681b19d213b91016e6469412b441c773&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=681b19d213b91016e6469412b441c773&units=metric`)
             .then(response => response.json())
             .then(data=> {
                 let temp =data['main']['temp']+' °C';
