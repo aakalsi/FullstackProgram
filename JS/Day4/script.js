@@ -46,16 +46,19 @@ function initialize(restcountries) {
         button.forEach(item => {
             item.addEventListener('click',function(e){
                 e.preventDefault();
+                event.stopPropagation();
             let t=(e.currentTarget.previousElementSibling.previousElementSibling.innerHTML).split(" ");   
             let lat=parseFloat(t[1]);
             let long=parseFloat(t[3]);
             // console.log(fetchW(lat,long));
             if (e.currentTarget.nextElementSibling){
                 e.preventDefault();
+                event.stopPropagation();
                 e.currentTarget.nextElementSibling.remove();
                 e.currentTarget.innerText='Click for Weather';
             } else {
                 e.preventDefault();
+                event.stopPropagation();
                 let html2=`<p class="card-text"></p>`
                 e.currentTarget.innerText='- Click for Weather';
                 e.currentTarget.insertAdjacentHTML('afterend',html2);
