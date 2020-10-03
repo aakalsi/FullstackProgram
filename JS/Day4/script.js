@@ -50,15 +50,15 @@ function initialize(restcountries) {
             let long=parseFloat(t[3]);
             // console.log(fetchW(lat,long));
             if (e.currentTarget.nextElementSibling){
+                e.preventDefault();
                 e.currentTarget.nextElementSibling.remove();
                 e.currentTarget.innerText='Click for Weather';
-                e.preventDefault();
             } else {
+                e.preventDefault();
                 let html2=`<p class="card-text"></p>`
                 e.currentTarget.innerText='- Click for Weather';
                 e.currentTarget.insertAdjacentHTML('afterend',html2);
                 fetchW(lat,long,e.currentTarget.nextElementSibling);
-                e.preventDefault();
             }
             })
         });
