@@ -50,12 +50,12 @@ function initialize(restcountries) {
             let lat=parseFloat(t[1]);
             let long=parseFloat(t[3]);
             // console.log(fetchW(lat,long));
-            let html2=`<p class="card-text">Added</p>`
             if (e.currentTarget.nextElementSibling){
                 e.currentTarget.nextElementSibling.remove();
                 e.currentTarget.innerText='Click for Weather';
                 e.preventDefault();
             } else {
+                let html2=`<p class="card-text">Added</p>`
                 e.currentTarget.innerText='- Click for Weather';
                 e.currentTarget.insertAdjacentHTML('afterend',html2);
                 fetchW(lat,long,e.currentTarget.nextElementSibling);
