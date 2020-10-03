@@ -41,7 +41,7 @@ function initialize(restcountries) {
     countries=restcountries;
     countries.forEach(element => {
         html+=`
-            <div class="card  shadow p-3" style="width: 300px; ">
+            <div class="card rounded border-light shadow p-3" style="width: 300px; ">
                     <img src="${element.flag}" class="card-img-top" alt="...">
                 <div class="card-body text-center">
                     <h5 class="card-title">Country: ${element.name}</h5>
