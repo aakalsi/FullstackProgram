@@ -33,7 +33,7 @@ function initialize(restcountries) {
                     <p class="card-text">Region: ${element.region}</p>
                     <p class="card-text">Latitude: ${(+element.latlng[0]).toFixed(2)+'<br> Longitude: '+ (+element.latlng[1]).toFixed(2)}</p>
                     <p class="card-text">Currency Code: ${element.currencies[0].code}</p>
-                    <a href="#" class="btn btn-primary">Click for Weather</a>
+                    <a href="#0" class="btn btn-primary">Click for Weather</a>
                 </div>
             </div>
         `
