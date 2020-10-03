@@ -55,7 +55,7 @@ function initialize(restcountries) {
                 e.currentTarget.innerText='Click for Weather';
                 e.preventDefault();
             } else {
-                let html2=`<p class="card-text">Added</p>`
+                let html2=`<p class="card-text"></p>`
                 e.currentTarget.innerText='- Click for Weather';
                 e.currentTarget.insertAdjacentHTML('afterend',html2);
                 fetchW(lat,long,e.currentTarget.nextElementSibling);
