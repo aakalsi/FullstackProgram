@@ -45,6 +45,7 @@ function initialize(restcountries) {
         let button = document.querySelectorAll('.btn');
         button.forEach(item => {
             item.addEventListener('click',function(e){
+                e.preventDefault();
             let t=(e.currentTarget.previousElementSibling.previousElementSibling.innerHTML).split(" ");   
             let lat=parseFloat(t[1]);
             let long=parseFloat(t[3]);
