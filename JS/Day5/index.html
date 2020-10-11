@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>CRUD Form</title>
+    <style>
+        .container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Personal Details Form</h1>
+        </div>
+        <hr>
+        <form onsubmit="addData(); return false">
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" id="name" class="form-control" value="test" placeholder="enter name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" id="email" class="form-control" placeholder="enter email"
+                        value="test@gmail.com">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="password" placeholder="enter password" value="test">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="reenterPassword" class="col-sm-2 col-form-label">Re-enter Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="reenterPassword" placeholder="re-enter password"
+                        value="test">
+                </div>
+            </div>
+            <div class="form-group row lists">
+                <label class="col-sm-2 col-form-label">Select Country:</label>
+                <div class="col-sm-10">
+                    <select name="country" id="countyList">
+                        <option value="" selected="selected">Select Country</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row lists">
+                <label class="col-sm-2 col-form-label">Select State:</label>
+                <div class="col-sm-10">
+                    <select name="state" id="stateList">
+                        <option value="" selected="selected">Select State</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row lists">
+                <label class="col-sm-2 col-form-label">Select City:</label>
+                <div class="col-sm-10">
+                    <select name="city" id="cityList">
+                        <option value="" selected="selected">Select City</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="addressline1" class="col-sm-2 col-form-label">Address Line 1</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="addressline1" placeholder="enter address line1"
+                        value="test">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="addressline2" class="col-sm-2 col-form-label">Address Line 2</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="addressline2" placeholder="enter address line2"
+                        value="test">
+                </div>
+            </div>
+            <div class="form-group row">
+                <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="Male" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                        <label class="form-check-label" for="gridRadios2">
+                            Female
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class=" form-group row">
+                <legend class="col-form-label col-sm-2 pt-0">Marital Status</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="maritalStatus" id="single" value="Single"
+                            checked>
+                        <label class="form-check-label" for="maritalStatus">
+                            Single
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="maritalStatus" id="married" value="Married">
+                        <label class="form-check-label" for="maritalStatus">
+                            Married
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="favFood" class="col-sm-2 col-form-label">Favourite Food</label>
+                <div class="col-sm-10">
+                    <input type="text" id="favFood" class="form-control" placeholder="enter favourite food"
+                        value="test">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="favColor" class="col-sm-2 col-form-label">Favourite Color</label>
+                <div class="col-sm-10">
+                    <input type="text" id="favColor" class="form-control" placeholder="enter favourite color"
+                        value="test">
+                </div>
+            </div>
+            <div class="form-group row">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+        <hr>
+        <table class="table table-striped table-bordered ">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">State</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Address Line1</th>
+                    <th scope="col">Address Line2</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Marital Status</th>
+                    <th scope="col">Favourite Food</th>
+                    <th scope="col">Favourite Color</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
